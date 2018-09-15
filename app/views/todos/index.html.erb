@@ -1,0 +1,14 @@
+<h1>Задачи</h1>
+<br>
+<br>
+<% @projects.each do |p| %>
+	<br>
+	<h2><%= p.title.upcase %></h2>
+	<br>
+	<% td = p.todos %>
+	<% td.each do |t| %>
+		<p> • <%= t.text %></p>	
+	<% end %>
+<% end %>
+<br>
+<h2>Новая задача</h2>

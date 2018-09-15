@@ -1,0 +1,12 @@
+<%= form_for @todos do |f| %>
+  <div>
+    <%= f.text_field :text %>
+  </div>
+  <div>
+    <%= select("post", "project_id", @projects.all.collect {|p| [ p.title ] }, { include_blank: true })%>
+  </div>
+  <div>
+    #<%= f.submit "OK" %>
+   # <%= link_to "Submit", your_path, id: "your_link" %>
+  </div>
+<% end %>
